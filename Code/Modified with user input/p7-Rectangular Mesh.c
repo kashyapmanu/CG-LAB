@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <GL/glut.h>
 
-float maxx, maxy;
+int maxx, maxy;
 #define dx 10
 #define dy 15
 GLfloat x[100], y[100];
@@ -46,12 +46,12 @@ void display(void)
 int main(int argc, char **argv)
 {
   printf("Enter the number of rows:");
-  scanf("%f", &maxx);
+  scanf("%d", &maxx);
 
   printf("Enter the number of columns:");
-  scanf("%f", &maxy);
-  x[maxx] = {0.0};
-  y[maxy] = {0.0};
+  scanf("%d", &maxy);
+  x[maxx] = 0.0;
+  y[maxy] = 0.0;
   glutInit(&argc, argv);
   glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
   glutInitWindowSize(500, 400);
